@@ -3,11 +3,11 @@ package wallet_test
 import (
 	"testing"
 
-	bip39 "github.com/cosmos/go-bip39"
-
 	"github.com/test-go/testify/require"
 
-	"github.com/b-harvest/cosmos-module-stress-test/wallet"
+	bip39 "github.com/cosmos/go-bip39"
+
+	"github.com/kogisin/cosmos-sdk-tx/wallet"
 )
 
 func TestRecoverAccAddrFromMnemonic(t *testing.T) {
