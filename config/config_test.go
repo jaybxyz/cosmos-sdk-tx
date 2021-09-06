@@ -18,8 +18,6 @@ func TestReadConfigFile(t *testing.T) {
 	require.Equal(t, "", cfg.RPC.Token)
 	require.Equal(t, "localhost:9090", cfg.GRPC.Address)
 	require.Equal(t, "", cfg.GRPC.Token)
-	require.Equal(t, true, cfg.GRPC.Insecure)
-	require.Equal(t, "http://localhost:1317", cfg.LCD.Address)
 }
 
 func TestParseConfigString(t *testing.T) {
@@ -32,17 +30,6 @@ token = ""
 address = "localhost:9090"
 token = ""
 insecure = true
-
-[lcd]
-address = "http://localhost:1317"
-
-[database]
-host = "http://localhost"
-port = "5432"
-user = "root"
-password = "admin123"
-name = "persistence"
-schema = "persistence-testnet"
 `
 	cfg, err := config.ParseString([]byte(sampleConfig))
 	require.NoError(t, err)
@@ -52,6 +39,4 @@ schema = "persistence-testnet"
 	require.Equal(t, "localhost:9090", cfg.GRPC.Address)
 	require.Equal(t, "", cfg.GRPC.Token)
 	require.Equal(t, true, cfg.GRPC.Insecure)
-	require.Equal(t, "http://localhost:1317", cfg.LCD.Address)
-	require.Equal(t, "http://localhost:5432", cfg.DB.Host+":"+cfg.DB.Port)
 }
