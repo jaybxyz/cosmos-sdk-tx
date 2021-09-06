@@ -16,3 +16,6 @@ vendor/
 
 # config
 config.toml
+
+# localnet data
+data
