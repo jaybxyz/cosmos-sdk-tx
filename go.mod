@@ -4,6 +4,8 @@ go 1.16
 
 require (
 	github.com/cosmos/cosmos-sdk v0.44.0
+	github.com/pelletier/go-toml v1.9.3
+	github.com/stretchr/testify v1.7.0
 	github.com/tendermint/tendermint v0.34.12
 	google.golang.org/grpc v1.38.0
 )

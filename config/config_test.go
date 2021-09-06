@@ -5,7 +5,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/kogisin/maphack/config"
+	"github.com/kogisin/cosmos-sdk-tx/config"
 )
 
 func TestReadConfigFile(t *testing.T) {
